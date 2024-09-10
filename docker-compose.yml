@@ -22,12 +22,8 @@ services:
       retries: 5
       start_period: 20s
       timeout: 10s
-    depends_on:
-      accounts.redis:
-        condition: service_healthy
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
-      Redis__Accounts__Configuration: 'accounts.redis:6379'
     networks:
       - phoenix
 
