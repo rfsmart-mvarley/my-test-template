@@ -10,7 +10,7 @@
 services:  
   TEMPLATE.api:
     build:
-      dockerfile: ./Rfsmart.Phoenix.TEMPLATE.Web/Dockerfile
+      dockerfile: ./rfsmart.phoenix.TEMPLATE.web/dockerfile
       args:
         NUGET_USERNAME: ${NUGET_USERNAME}
         NUGET_TOKEN: ${NUGET_TOKEN}
@@ -34,7 +34,7 @@ services:
   TEMPLATE.tests:
     image: TEMPLATE-integration-tests
     build:
-      dockerfile: ./Rfsmart.Phoenix.TEMPLATE.Tests/Dockerfile
+      dockerfile: ./rfsmart.phoenix.TEMPLATE.tests/dockerfile
       args:
         NUGET_USERNAME: ${NUGET_USERNAME}
         NUGET_TOKEN: ${NUGET_TOKEN}
