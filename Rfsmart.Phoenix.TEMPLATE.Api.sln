@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rfsmart.Phoenix.TEMPLATE.Web", "Rfsmart.Phoenix.TEMPLATE.Web\Rfsmart.Phoenix.TEMPLATE.Web.csproj", "{3009F8A3-72D9-4446-ACF1-4B4B5D3C7068}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rfsmart.Phoenix.TEMPLATE", "Rfsmart.Phoenix.TEMPLATE\Rfsmart.Phoenix.TEMPLATE.csproj", "{868BFD69-70D6-4D11-8072-505FA1F6E95A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rfsmart.Phoenix.TEMPLATE.Tests", "Rfsmart.Phoenix.TEMPLATE.Tests\Rfsmart.Phoenix.TEMPLATE.Tests.csproj", "{B4A4A622-6D8D-4DAC-A456-3B57031B5B85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3009F8A3-72D9-4446-ACF1-4B4B5D3C7068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3009F8A3-72D9-4446-ACF1-4B4B5D3C7068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3009F8A3-72D9-4446-ACF1-4B4B5D3C7068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3009F8A3-72D9-4446-ACF1-4B4B5D3C7068}.Release|Any CPU.Build.0 = Release|Any CPU
+		{868BFD69-70D6-4D11-8072-505FA1F6E95A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{868BFD69-70D6-4D11-8072-505FA1F6E95A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{868BFD69-70D6-4D11-8072-505FA1F6E95A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{868BFD69-70D6-4D11-8072-505FA1F6E95A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A4A622-6D8D-4DAC-A456-3B57031B5B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A4A622-6D8D-4DAC-A456-3B57031B5B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A4A622-6D8D-4DAC-A456-3B57031B5B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A4A622-6D8D-4DAC-A456-3B57031B5B85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
