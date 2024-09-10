@@ -1,4 +1,4 @@
-name: Run Integration Tests - Scim
+name: Run Integration Tests
 on:
   workflow_call:
 permissions:
@@ -28,8 +28,8 @@ jobs:
         env:
           NUGET_USERNAME: ${{ github.actor }}
           NUGET_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: docker compose up --exit-code-from scim.integrationtests scim.integrationtests
+        run: docker compose up --exit-code-from TEMPLATE.integrationtests TEMPLATE.integrationtests
 
       - name: Tear down the test environment
         if: always()
-        run: docker compose down scim.integrationtests
+        run: docker compose down TEMPLATE.integrationtests

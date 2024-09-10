@@ -2,7 +2,7 @@
 
 ## Overview
 
-Deploys scim-web to an ECS cluster.
+Deploys TEMPLATE-web to an ECS cluster.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

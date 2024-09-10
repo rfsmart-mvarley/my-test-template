@@ -1,10 +1,10 @@
-app_name           = "scim-web"
-app_image          = "ghcr.io/rf-smart-for-oraclecloud/scim-web"
+app_name           = "TEMPLATE-web"
+app_image          = "ghcr.io/rf-smart-for-oraclecloud/TEMPLATE-web"
 environment        = "phxdev"
 namespace          = "phoenix"
-route_53_a_record  = "scim-api.phxdev.phoenix.rfsmart.com"
+route_53_a_record  = "TEMPLATE-api.phxdev.phoenix.rfsmart.com"
 route_53_zone_name = "phxdev.phoenix.rfsmart.com"
 service_declaration = {
-  name = "scim"
+  name = "TEMPLATE"
   type = "api"
 }
