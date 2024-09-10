@@ -1,2 +1,2 @@
-# my-test-template
-Testing repo templates
+# my-test-MyApiName
+Testing repo MyApiNames
