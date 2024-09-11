@@ -2,7 +2,7 @@
 
 ## Overview
 
-Deploys L-TEMPLATE-web to an ECS cluster.
+Deploys TEMP-LATE-web to an ECS cluster.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

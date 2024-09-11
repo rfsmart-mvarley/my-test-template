@@ -29,8 +29,8 @@ module "tags" {
 
   extra_tags = {
     MonoRepo     = "True"
-    MonoRepoPath = "iac/deploys/L-TEMPLATE-web"
-    Repo         = "github.com/RF-SMART-for-OracleCloud/phoenix-L-TEMPLATE-api"
+    MonoRepoPath = "iac/deploys/TEMP-LATE-web"
+    Repo         = "github.com/RF-SMART-for-OracleCloud/phoenix-TEMP-LATE-api"
     map-migrated = "d-server-02nwr9q06bp0nt"
   }
 }

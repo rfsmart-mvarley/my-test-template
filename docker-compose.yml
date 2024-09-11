@@ -8,9 +8,9 @@
 # database or a cache. For examples, see the Awesome Compose repository:
 # https://github.com/docker/awesome-compose
 services:  
-  L-TEMPLATE.api:
+  TEMP-LATE.api:
     build:
-      dockerfile: ./rfsmart.phoenix.L-TEMPLATE.web/dockerfile
+      dockerfile: ./rfsmart.phoenix.TEMP-LATE.web/dockerfile
       args:
         NUGET_USERNAME: ${NUGET_USERNAME}
         NUGET_TOKEN: ${NUGET_TOKEN}
@@ -27,15 +27,15 @@ services:
     networks:
       - phoenix
 
-  L-TEMPLATE.tests:
-    image: L-TEMPLATE-integration-tests
+  TEMP-LATE.tests:
+    image: TEMP-LATE-integration-tests
     build:
-      dockerfile: ./rfsmart.phoenix.L-TEMPLATE.tests/dockerfile
+      dockerfile: ./rfsmart.phoenix.TEMP-LATE.tests/dockerfile
       args:
         NUGET_USERNAME: ${NUGET_USERNAME}
         NUGET_TOKEN: ${NUGET_TOKEN}
     depends_on:
-      L-TEMPLATE.api:
+      TEMP-LATE.api:
         condition: service_healthy
     environment:
       DOTNET_ENVIRONMENT: "Development"
@@ -43,7 +43,7 @@ services:
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
       AWS_SESSION_TOKEN: ${AWS_SESSION_TOKEN}
-      IntegrationTestSettings__AppUrl: "http://L-TEMPLATE.api:5010"
+      IntegrationTestSettings__AppUrl: "http://TEMP-LATE.api:5010"
     networks:
       - phoenix
     volumes:
