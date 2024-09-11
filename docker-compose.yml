@@ -27,7 +27,7 @@ services:
     networks:
       - phoenix
 
-  TEMP-LATE.tests:
+  TEMP-LATE.integrationtests:
     image: TEMP-LATE-integration-tests
     build:
       dockerfile: ./rfsmart.phoenix.TEMP-LATE.integrationtests/dockerfile
