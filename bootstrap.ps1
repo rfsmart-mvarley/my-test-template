@@ -32,6 +32,9 @@ dotnet sln add "Rfsmart.Phoenix.$apiName.IntegrationTests"
 Move-Item -Path "./Tests-Dockerfile" -Destination "./Rfsmart.Phoenix.$apiName.IntegrationTests/Dockerfile"
 Move-Item -Path "./Web-Dockerfile" -Destination "./Rfsmart.Phoenix.$apiName.Web/Dockerfile"
 
+# install required tools
+dotnet tool restore
+
 Write-Host "SLN files created!" -BackgroundColor Green -ForegroundColor Black
 
 Write-Host "Updating deploy/iac files..." -BackgroundColor Yellow -ForegroundColor Black
