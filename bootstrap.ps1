@@ -12,21 +12,24 @@ Write-Host "Creating SLN files..." -BackgroundColor Yellow -ForegroundColor Blac
 
 dotnet new webapi --name "Rfsmart.Phoenix.$apiName.Web" --use-controllers
 dotnet new classlib --name "Rfsmart.Phoenix.$apiName" 
-dotnet new nunit --name "Rfsmart.Phoenix.$apiName.Tests"
+dotnet new nunit --name "Rfsmart.Phoenix.$apiName.UnitTests"
+dotnet new nunit --name "Rfsmart.Phoenix.$apiName.IntegrationTests"
 
 # add classlib ref to web project
 dotnet add "Rfsmart.Phoenix.$apiName.Web/Rfsmart.Phoenix.$apiName.Web.csproj" reference "Rfsmart.Phoenix.$apiName/Rfsmart.Phoenix.$apiName.csproj"
 
-# add classlib ref to test project
-dotnet add "Rfsmart.Phoenix.$apiName.Tests/Rfsmart.Phoenix.$apiName.Tests.csproj" reference "Rfsmart.Phoenix.$apiName/Rfsmart.Phoenix.$apiName.csproj"
+# add classlib ref to test projects
+dotnet add "Rfsmart.Phoenix.$apiName.UnitTests/Rfsmart.Phoenix.$apiName.UnitTests.csproj" reference "Rfsmart.Phoenix.$apiName/Rfsmart.Phoenix.$apiName.csproj"
+dotnet add "Rfsmart.Phoenix.$apiName.IntegrationTests/Rfsmart.Phoenix.$apiName.IntegrationTests.csproj" reference "Rfsmart.Phoenix.$apiName/Rfsmart.Phoenix.$apiName.csproj"
 
 # create sln
 dotnet new sln --name "Rfsmart.Phoenix.$apiName.Api"
 dotnet sln add "Rfsmart.Phoenix.$apiName.Web"
 dotnet sln add "Rfsmart.Phoenix.$apiName"
-dotnet sln add "Rfsmart.Phoenix.$apiName.Tests"
+dotnet sln add "Rfsmart.Phoenix.$apiName.UnitTests"
+dotnet sln add "Rfsmart.Phoenix.$apiName.IntegrationTests"
 
-Move-Item -Path "./Tests-Dockerfile" -Destination "./Rfsmart.Phoenix.$apiName.Tests/Dockerfile"
+Move-Item -Path "./Tests-Dockerfile" -Destination "./Rfsmart.Phoenix.$apiName.IntegrationTests/Dockerfile"
 Move-Item -Path "./Web-Dockerfile" -Destination "./Rfsmart.Phoenix.$apiName.Web/Dockerfile"
 
 Write-Host "SLN files created!" -BackgroundColor Green -ForegroundColor Black

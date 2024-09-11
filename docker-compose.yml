@@ -30,7 +30,7 @@ services:
   TEMP-LATE.tests:
     image: TEMP-LATE-integration-tests
     build:
-      dockerfile: ./rfsmart.phoenix.TEMP-LATE.tests/dockerfile
+      dockerfile: ./rfsmart.phoenix.TEMP-LATE.integrationtests/dockerfile
       args:
         NUGET_USERNAME: ${NUGET_USERNAME}
         NUGET_TOKEN: ${NUGET_TOKEN}
