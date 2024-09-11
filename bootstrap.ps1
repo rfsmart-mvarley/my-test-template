@@ -7,7 +7,7 @@ if(-not ($folderName -match "phoenix-[\w]*-api")) {
 $TextInfo = (Get-Culture).TextInfo
 $apiname = $TextInfo.ToTitleCase(($folderName -Split '-')[1])
 $templateTitleCase = "TEMPLATE"
-$templateLowerCase = "L-TEMPLATE"
+$templateLowerCase = "TEMP-LATE"
 
 ForEach ($File in (Get-ChildItem -Recurse -File -Exclude *.ps1)) {
     if ($File.Directory -match 'obj') {
