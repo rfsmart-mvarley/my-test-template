@@ -23,11 +23,8 @@ function Write-Red {
 }
 
 $File = "$env:USERPROFILE\.aws\credentials"
-#retrieves the Systems current Date and Time in a DateTime Format
 $today = Get-Date
-#subtracts 12 hours from the date to ensure the file has been written to recently
 $today = $today.AddHours(-1)
-#gets the last time the $file was written in a DateTime Format
 $lastWriteTime = (Get-Item $File).LastWriteTime
 
 if ($lastWriteTime -lt $today) {
@@ -135,30 +132,30 @@ Write-Host "Deploy/iac files updated!" -BackgroundColor Green -ForegroundColor B
 
 # Write-Host "Updating repository ruleset..." -BackgroundColor Yellow -ForegroundColor Black
 
-# $default = "RF-SMART-for-OracleCloud"
-# if (!($org = Read-Host "Enter organization [$default]")) { 
-#     $org = $default 
-# }
+$default = "RF-SMART-for-OracleCloud"
+if (!($org = Read-Host "Enter organization [$default]")) { 
+    $org = $default 
+}
 
-# $token = $env:GH_TOKEN
+$token = $env:GH_TOKEN
 
-# if (!($token)) {
-#     $token = $env:GITHUB_TOKEN
-# }
+if (!($token)) {
+    $token = $env:GITHUB_TOKEN
+}
 
-# while (!($token)) { 
-#     $token = Read-Host "Enter token" 
-# }
+while (!($token)) { 
+    $token = Read-Host "Enter token" 
+}
 
-# $Headers = @{
-#     "Accept" = "application/vnd.github+json"
-#     "Authorization" = "Bearer " + $token
-#     "X-GitHub-Api-Version" = "2022-11-28"
-# }
+$Headers = @{
+    "Accept" = "application/vnd.github+json"
+    "Authorization" = "Bearer " + $token
+    "X-GitHub-Api-Version" = "2022-11-28"
+}
 
-# $Response = Invoke-WebRequest -URI "https://api.github.com/repos/$org/phoenix-$apiNameLower-api/rulesets" `
-#     -Headers $Headers `
-#     -Method Post `
-#     -Body (Get-Content '.github/main branch.json' | Out-String)
+$Response = Invoke-WebRequest -URI "https://api.github.com/repos/$org/phoenix-$apiNameLower-api/rulesets" `
+    -Headers $Headers `
+    -Method Post `
+    -Body (Get-Content '.github/main branch.json' | Out-String)
 
-# Write-Host "Repository ruleset updated!" -BackgroundColor Green -ForegroundColor Black
+Write-Host "Repository ruleset updated!" -BackgroundColor Green -ForegroundColor Black
